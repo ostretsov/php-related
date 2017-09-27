@@ -1,0 +1,17 @@
+{
+    "name": "ostretsov/php-related",
+    "autoload-dev": {
+        "psr-4": {"Tests\\": "tests/"}
+    },
+    "require": {
+        "php": ">=7.1.0",
+        "phpunit/phpunit": "^6.3"
+    },
+    "license": "GNU GPLv3",
+    "authors": [
+        {
+            "name": "Artem Ostretsov",
+            "email": "artem@ostretsov.ru"
+        }
+    ]
+}
