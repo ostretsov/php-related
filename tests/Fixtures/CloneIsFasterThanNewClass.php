@@ -6,7 +6,7 @@
 
 namespace Tests\Fixtures;
 
-class CloneVsNewClass
+class CloneIsFasterThanNewClass
 {
     private $a;
     private $b;

@@ -7,9 +7,9 @@
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
-use Tests\Fixtures\CloneVsNewClass;
+use Tests\Fixtures\CloneIsFasterThanNewClass;
 
-class CloneAndNewComparisonTest extends TestCase
+class CloneIsFasterThanNewTest extends TestCase
 {
     private const TRIES = 16;
     private const ITERATIONS = 1048576;
@@ -28,7 +28,7 @@ class CloneAndNewComparisonTest extends TestCase
         $tests = [];
         for ($test = 0; $test < self::TRIES; $test++) {
             $t1 = microtime(true);
-            $prototype = new CloneVsNewClass();
+            $prototype = new CloneIsFasterThanNewClass();
             for ($i = 0; $i < self::ITERATIONS; $i++) {
                 $tmp = clone $prototype;
             }
@@ -47,7 +47,7 @@ class CloneAndNewComparisonTest extends TestCase
         for ($test = 0; $test < self::TRIES; $test++) {
             $t1 = microtime(true);
             for ($i = 0; $i < self::ITERATIONS; $i++) {
-                $tmp = new CloneVsNewClass();
+                $tmp = new CloneIsFasterThanNewClass();
             }
             $tests[$test] = microtime(true) - $t1;
         }
